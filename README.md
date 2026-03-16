@@ -38,5 +38,32 @@ Click the image above to watch the full project demo video.
 
 ### Build Docker Image
 
-```bash
 docker build -t react-crud-app .
+
+Run Container
+
+docker run -d -p 80:80 react-crud-app
+
+📦 Push Image to Docker Hub
+docker tag react-crud-app username/react-crud-app
+docker push username/react-crud-app
+
+☁️ Deploy on AWS EC2
+
+### Steps followed for deployment:
+
+1️⃣ Launch EC2 Instance
+
+Create a new EC2 instance from the AWS console.
+
+2️⃣ Install Docker
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+3️⃣ Pull Image from Docker Hub
+docker pull username/react-crud-app
+4️⃣ Run the Container
+docker run -d -p 80:80 username/react-crud-app
+
+Now the application will be accessible using the public IP of the EC2 instance.
