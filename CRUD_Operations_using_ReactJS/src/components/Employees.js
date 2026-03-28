@@ -29,6 +29,11 @@ const Employees = [
     Name: "Arun",
     Age: "28",
   },
+    {
+    id: "7",
+    Name: "Akash",
+    Age: "22",
+  },
 
 ];
 
